@@ -2,7 +2,13 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-
+	<style type="text/css">
+	* { margin: 0px padding: 0px;}
+	#pgBackground { width: 900px; margin: 0 auto;}
+	#pgHeader ul { padding: 12px; border: 1px solid #6F1328; margin: 0px; }
+	#pgHeader ul li { list-style: none; background-color: #CC7777; display: inline; color: #6F1328; }
+	#pgHeader nav { background-color: #CC7777;}
+	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
 	
@@ -14,7 +20,17 @@
 </head>
 <body>
 	<div id="pgBackground">
-	
+	<div id="pgHeader">
+	<nav>
+		<ul>
+			<li>Home</li>
+			<li>Projects</li>
+			<li>About</li>
+		</ul>	
+	</nav>
+	</div>
+	<div id="pgContent">
+	</div>
 	</div>
 </body>
 </html>
