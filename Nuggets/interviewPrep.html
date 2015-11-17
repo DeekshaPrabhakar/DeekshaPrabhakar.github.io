@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Interview Preparation App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+	<style type="text/css">
+	* { margin: 0px ;padding: 0px;}
+	#pgHeaderBar ,#pgNav , #pgContent { width: 80%; margin: 0 auto;}
+	#pgHeaderBar { text-align: left; padding-bottom: 2px; border-bottom: 2px solid #cc7777;}
+	#pgHeaderBar img { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 4px 0 0; vertical-align: bottom;}
+	#nameDiv { display: inline-block; }
+	#nameDiv span { font-size: 18px; color: #6f1328; font-weight: bold;  }
+	#nameDiv p { color: #cc7777; font-size: 15px; }
+	#categoriesDiv ul { list-style: outside none none; }
+	#categoriesDiv ul li { }
+	#categoriesDiv ul li a { color: #6F1328; }
+	#categoriesDiv { margin: 12px 0;  }
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+	});
+	</script>
+</head>
+<body>
+	<div id="home">
+		<header id="pgHeaderBar">
+			<img src="../images/dpSmall.jpg" alt="Display Picture" />
+			<div id="nameDiv">
+				<span>Deeksha Prabhakar</span>
+				<p>Web &amp; iOS Developer</p>
+			</div>
+		</header>
+		<div id="pgContent">
+			<nav id="categoriesDiv">
+				<ul>
+					<li><div class="category">HTML</div></li>
+					<li><div class="category">CSS</div></li>
+					<li><div class="category">JavaScript</div></li>
+				</ul>
+			</nav>
+		
+			<label>Question: </label>
+			<input type="text" />
+			<label>Answer: </label>
+			<input type="text" />
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Interview Preparation App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+	<style type="text/css">
+	* { margin: 0px ;padding: 0px;}
+	#pgHeaderBar ,#pgNav , #pgContent { width: 80%; margin: 0 auto;}
+	#pgHeaderBar { text-align: left; padding-bottom: 2px; border-bottom: 2px solid #cc7777;}
+	#pgHeaderBar img { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 4px 0 0; vertical-align: bottom;}
+	#nameDiv { display: inline-block; }
+	#nameDiv span { font-size: 18px; color: #6f1328; font-weight: bold; }
+	#nameDiv p { color: #cc7777; font-size: 15px; }
+	#categoriesDiv ul { list-style: outside none none; }
+	#categoriesDiv ul li { }
+	#categoriesDiv ul li a { color: #6F1328; }
+	#categoriesDiv { margin: 12px 0;  }
+	#pgContent h1 { margin: 10px 0; }
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript">
+	function setUpTooltip(){
+		$("#tip").attr("title", $("#msg").html());
+		$("#tip").tooltip({
+			content: function(){
+				return $(this).prop("title");
+			}
+		})
+
+	}
+
+	$(document).ready(function(){
+		setUpTooltip();
+	});
+	</script>
+</head>
+<body>
+	<div id="home">
+		<header id="pgHeaderBar">
+			<img src="../images/dpSmall.jpg" alt="Display Picture" />
+			<div id="nameDiv">
+				<span>Deeksha Prabhakar</span>
+				<p>Web &amp; iOS Developer</p>
+			</div>
+		</header>
+		<div id="pgContent">
+			<h1>AJAX - Asynchronous JavaScript and XML</h1>
+			<h4>Background</h4>
+			<p>When you enter an url in the browser, according to the client-server architecture, the browser (client) sends a request to the server and the server responds with the resources requested. This does a full page load. A full page load involves fetching the page and its associated recources like images, css, js files etc. Although most of these resources are cached by your browser the first time the page is requested (so that the consecutive requests are fast) there is still a full page load happening. Till the request is received, the page and its content is unavailable and the user is just sitting there and waiting (which is not good, coz no one like waiting). </p>
+			<p>There are many cases when you need to update only a part of the web page and not load the whole web page again (like header, footer etc). This is where AJAX comes to rescue. </p>
+
+		<h3>jQuery Ajax Tooltip</h3>
+			<p>A simple jquery tooltip looks like this</p>
+			<label id="tip">Tip</label>
+			<div id="msg" style="display:none;">This is a text that is displayed when hovered on the tip.</div>
+		</div>
+	</div>
+</body>
+</html>
