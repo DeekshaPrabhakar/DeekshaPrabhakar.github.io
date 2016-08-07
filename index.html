@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="deeApp">
 <head>
 	<title>Deeksha's Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,27 +13,37 @@
 	#nameDiv h3 { font-size: 18px; color: #6f1328;  }
 	#nameDiv p { color: #cc7777; font-size: 16px; }
 	#nameDiv img.linkedinLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; }
+	#pgHeaderBar ul { text-align: right; }
+	#pgHeaderBar ul li { display: inline; padding: 10px }
+	#pgHeaderBar ul li a { color: #6f1328; text-decoration: none; }
 	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	
-	<script type="text/javascript">
-	$(document).ready(function(){
-		
-	});
-	</script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<base href="/">
+	<script type="text/javascript" src="js/pApp.js"></script>
 </head>
-<body>
+<!-- define angular controller -->
+<body ng-controller="mainController">
 	<div id="home">
 		<header id="pgHeaderBar">
 			<img class="dp" src="images/dpSmall.jpg" alt="Display Picture" />
 			<div id="nameDiv">
 				<h3>Deeksha Prabhakar</h3>
-				<p>Web &amp; iOS Developer <a href="https://www.linkedin.com/in/deekshaprabhakar" target="_blank"><img class="linkedinLogo" src="images/linkedInLogo30.png"></a></p>
+				<p>Web &amp; iOS Developer <a href="https://www.linkedin.com/in/deekshaprabhakar" target="_blank"><img class="linkedinLogo" src="images/linkedInLogo30.png">
+				</a></p>
 			</div>
+			<ul >
+        <li><a href="pages/about">About</a></li>
+        <li><a href="/pages/contact">Contact</a></li>
+        <li><a href="/pages/resume">Resume</a></li>
+      </ul>
 		</header>
 		<div id="pgContent">	
-			
+			 <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
 		</div>
 	</body>
 	</html>
