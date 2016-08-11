@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="deeApp">
+<html>
 <head>
 	<title>Deeksha's Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<style type="text/css">
-	* { margin: 0px ;padding: 0px;}
-	#pgHeaderBar ,#pgNav , #pgContent { width: 80%; margin: 0 auto;}
-	#pgHeaderBar { text-align: left; padding-bottom: 2px; border-bottom: 2px solid #cc7777;}
-	#pgHeaderBar img.dp { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 4px 0 0; vertical-align: bottom;}
-	#nameDiv { display: inline-block; }
-	#nameDiv h3 { font-size: 18px; color: #6f1328;  }
-	#nameDiv p { color: #cc7777; font-size: 16px; }
-	#nameDiv img.linkedinLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; }
-	#pgHeaderBar ul { text-align: right; }
-	#pgHeaderBar ul li { display: inline; padding: 10px }
-	#pgHeaderBar ul li a { color: #6f1328; text-decoration: none; }
+		* { margin: 0px ;padding: 0px;}
+		#pgHeaderBar ,#pgNav , #pgContent { width: 80%; margin: 0 auto;}
+
+		#pgHeaderBar { text-align: left; padding-bottom: 2px; border-bottom: 2px solid #cc7777;}
+		#pgHeaderBar img.dp { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 4px 0 0; vertical-align: bottom;}
+		
+		#nameDiv { display: inline-block; }
+		#nameDiv h3 { font-size: 18px; color: #6f1328;  }
+		#nameDiv p { color: #cc7777; font-size: 16px; }
+		#nameDiv img.linkedinLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; }
+		
+		#pgContent { padding: 20px 0; }
+		#pgContent p { margin-bottom: 12px; font-size: 0.9em; line-height: 1.2em; }
+		.topicBox { display: inline-block; text-align: center; }
+		.topicBox a { font-size: 0.8em; }
+		.topic { display: table; width: 50px; height: 50px; text-align: center; padding: 10px; border: 1px solid #6f1328; border-radius: 12px; background: #eee; }
+		.topic label { display: table-cell; vertical-align: middle; font-size: 0.9em; line-height: 1.3em; }
 	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular-route.js"></script>
-	<base href="/">
-	<script type="text/javascript" src="js/pApp.js"></script>
 </head>
-<!-- define angular controller -->
-<body ng-controller="mainController">
+<body>
 	<div id="home">
 		<header id="pgHeaderBar">
 			<img class="dp" src="images/dpSmall.jpg" alt="Display Picture" />
@@ -34,16 +35,18 @@
 				<p>Web &amp; iOS Developer <a href="https://www.linkedin.com/in/deekshaprabhakar" target="_blank"><img class="linkedinLogo" src="images/linkedInLogo30.png">
 				</a></p>
 			</div>
-			<ul >
-        <li><a href="pages/about">About</a></li>
-        <li><a href="/pages/contact">Contact</a></li>
-        <li><a href="/pages/resume">Resume</a></li>
-      </ul>
 		</header>
 		<div id="pgContent">	
-			 <!-- angular templating -->
-		<!-- this is where content will be injected -->
-    <div ng-view></div>
+			<p>Hi there! Solving problems through code gives me happiness, contentment and pride. </p>
+			<p>At my first internship among the many valuable lessons learnt, one was "while solving a problem always extract and bring it to its smallest size and then solve it". </p>
+			<p>So here I will be posting stuff which I try as a proof of concept or other side projects.</p>
+			<div class="topicBox"><div class="topic"><label>
+				Hamburger Menu
+			</label>
 		</div>
-	</body>
-	</html>
+		<a href="hamburgerMenuIcon.html">Demo</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

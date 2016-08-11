@@ -3,27 +3,26 @@
 
 	// configure our routes
 	deeApp.config(function($routeProvider, $locationProvider) {
+
 		$routeProvider
+	
+		// route for the about page
+		.when('/about', {
+			templateUrl : 'pages/about.html',
+			controller  : 'aboutController'
+		})
 
-			// route for the home page
-			
-			// route for the about page
-			.when('/about', {
-				templateUrl : 'pages/about.html',
-				controller  : 'aboutController'
-			})
+		// route for the contact page
+		.when('/contact', {
+			templateUrl : 'pages/contact.html',
+			controller  : 'contactController'
+		})
 
-			// route for the contact page
-			.when('/contact', {
-				templateUrl : 'pages/contact.html',
-				controller  : 'contactController'
-			})
-
-			// route for the resume page
-			.when('/resume', {
-				templateUrl : 'pages/resume.html',
-				controller  : 'resumeController'
-			});
+		// route for the resume page
+		.when('/resume', {
+			templateUrl : 'pages/resume.html',
+			controller  : 'resumeController'
+		});
 
 			// use the HTML5 History API
         $locationProvider.html5Mode(true);
