@@ -6,22 +6,27 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<style type="text/css">
 		* { margin: 0px ;padding: 0px;}
-		#pgHeaderBar ,#pgNav , #pgContent { width: 80%; margin: 0 auto;}
 
-		#pgHeaderBar { text-align: left; padding-bottom: 2px; border-bottom: 2px solid #cc7777;}
+		header, #pgContent { max-width: 80%; margin: 0 auto; }
+		header { text-align: center; padding: 5px 22px; border-bottom: 1px solid #cc7777; }
+
 		#pgHeaderBar img.dp { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 4px 0 0; vertical-align: bottom;}
-		
-		#nameDiv { display: inline-block; }
+		#nameDiv { display: inline-block; text-align: left; }
 		#nameDiv h3 { font-size: 18px; color: #6f1328;  }
 		#nameDiv p { color: #cc7777; font-size: 16px; }
 		#nameDiv img.linkedinLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; }
 		
-		#pgContent { padding: 20px 0; }
-		#pgContent p { margin-bottom: 12px; font-size: 0.9em; line-height: 1.2em; }
+		#pgContent section { padding: 20px 22px; }
+		#pgContent section:nth-child(2) { padding: 0px 22px; }
+		#pgContent p { margin-bottom: 12px; font-size: 1em; line-height: 1.4em; }
+
 		.topicBox { display: inline-block; text-align: center; }
 		.topicBox a { font-size: 0.8em; }
-		.topic { display: table; width: 50px; height: 50px; text-align: center; padding: 10px; border: 1px solid #6f1328; border-radius: 12px; background: #eee; }
+		.topic { display: table; width: 100px; height: 100px; text-align: center; padding: 10px; border: 1px solid #6f1328; border-radius: 12px; background: #eee; }
 		.topic label { display: table-cell; vertical-align: middle; font-size: 0.9em; line-height: 1.3em; }
+		
+		.topicBox:nth-child(1) .topic { background-color: :#fff; background-image: url("images/hamburgerMenu.gif"); }
+		.topicBox:nth-child(1) .topic label { vertical-align: bottom; }
 	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
@@ -37,16 +42,22 @@
 			</div>
 		</header>
 		<div id="pgContent">	
-			<p>Hi there! Solving problems through code gives me happiness, contentment and pride. </p>
-			<p>At my first internship among the many valuable lessons learnt, one was "while solving a problem always extract and bring it to its smallest size and then solve it". </p>
-			<p>So here I will be posting stuff which I try as a proof of concept or other side projects.</p>
-			<div class="topicBox"><div class="topic"><label>
-				Hamburger Menu
-			</label>
+			<section>
+				<p>Hi there! Solving problems through code gives me happiness, contentment and pride. </p>
+				<p>At my first internship among the many valuable lessons learnt, one was, "while solving a problem always extract and bring it to its smallest size and then solve it". </p>
+				<p>So here I will be posting stuff which I try as a proof of concept or other side projects.</p>
+			</section>
+			<section>
+				<div class="topicBox">
+					<div class="topic">
+						<label>
+							Hamburger menu using CSS		
+						</label>
+					</div>
+					<a href="hamburgerMenuIcon.html">Demo</a>
+				</div>
+			</section>
 		</div>
-		<a href="hamburgerMenuIcon.html">Demo</a>
 	</div>
-</div>
-</div>
 </body>
 </html>
