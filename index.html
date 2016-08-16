@@ -20,13 +20,13 @@
 		#pgContent section:nth-child(2) { padding: 0px 22px; }
 		#pgContent p { margin-bottom: 12px; font-size: 1em; line-height: 1.4em; }
 
-		.topicBox { display: inline-block; text-align: center; }
-		.topicBox a { font-size: 0.8em; }
-		.topic { display: table; width: 100px; height: 100px; text-align: center; padding: 10px; border: 1px solid #6f1328; border-radius: 12px; background: #eee; }
-		.topic label { display: table-cell; vertical-align: middle; font-size: 0.9em; line-height: 1.3em; }
+		.topicBox { display: inline-block; text-align: center; margin: 0 32px 20px 0; }
+		.topicBox a { font-size: 0.9em; color: #6f1328; }
+		.topic { display: table; width: 320px; height: 150px; text-align: center; padding: 10px; border: 1px solid #6f1328; border-radius: 12px; background: #fff; background-repeat: no-repeat; }
+		.topic label { display: table-cell; vertical-align: bottom; font-size: 0.9em; line-height: 1.3em; }
 		
-		.topicBox:nth-child(1) .topic { background-color: :#fff; background-image: url("images/hamburgerMenu.gif"); }
-		.topicBox:nth-child(1) .topic label { vertical-align: bottom; }
+		.topicBox:nth-child(1) .topic { background-image: url("images/hamburgerMenu.gif"); }
+		.topicBox:nth-child(2) .topic { background-image: url("images/desktopMobileMenu.gif"); }
 	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
@@ -55,6 +55,14 @@
 						</label>
 					</div>
 					<a href="hamburgerMenuIcon.html">Demo</a>
+				</div>
+				<div class="topicBox">
+					<div class="topic">
+						<label>
+							Desktop and mobile menu using CSS		
+						</label>
+					</div>
+					<a href="desktopMobileMenu.html">Demo</a>
 				</div>
 			</section>
 		</div>
