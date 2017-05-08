@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		
+		
+	</style>
+
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+
+		});
+
+		var thisInStrictMode = function(){
+			"use strict";
+			return this;
+		}
+
+		var logThis = function(){
+			return this;
+		}
+
+		function log(){
+			document.getElementById("logThisResult").innerHTML = thisInStrictMode() + "\n" + logThis();
+		}
+
+		function formatText(label, val){
+			return '<p></p>';
+		}
+	</script>
+</head>
+<body>
+	<div id="home">
+	<!--
+		<header id="pgHeaderBar">
+			<img class="dp" src="images/dpSmall.jpg" alt="Display Picture" />
+			<div id="nameDiv">
+				<h3>Deeksha Prabhakar</h3>
+				<label>Web &amp; iOS Developer</label>
+				<a href="https://github.com/DeekshaPrabhakar" target="_blank"><img title="Github" alt="Github Logo" class="githubLogo" src="images/GitHub-Mark-32px.png"></a>
+				<a href="https://www.linkedin.com/in/deekshaprabhakar" target="_blank"><img title="LinkedIn" alt="LinkedIn Logo" class="linkedinLogo" src="images/linkedInLogo30.png"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="poc.html">POC</a></li>
+					<li><a href="articles.html">Articles</a></li>
+				</ul>
+			</nav>
+		</header>
+		-->
+		<div id="pgContent">	
+			<section>
+				<article>
+					<h2>"this" pointer</h2>
+					<input type="button" name="Evaluate" onclick="log();return false;" value="Evaluate this"/>
+					<div id="logThisResult"></div>
+				</article>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">
 		* { margin: 0px ;padding: 0px;}
-		.mobileMenu, .desktopMenu { background: #eee; height: 40px; transition: opacity 0s linear 0s; }
-		.mobileMenu
+		.mobileMenu, .desktopMenu { background: #eee; height: 40px;  }
 		#pgContent { width: 80%; margin: 0 auto;}
 
 		nav ul li { list-style: none; padding: 0 12px; display: inline-block; }
@@ -24,18 +23,26 @@
 		li.logo a { background-image: url("images/strawberry32.png"); background-repeat: no-repeat; display: inline-block; height: 40px; width: 40px; }
 		li.logo a span { visibility: hidden;  }
 
-		.mobileMenu { text-align: center; opacity: 0; height: 0; }
-		.desktopMenu { overflow: hidden; white-space: nowrap; }
+		.mobileMenu { text-align: center; display: none;}
+		.desktopMenu { white-space: nowrap; }
 		.desktopMenu li { vertical-align: middle; }
+		ul.responsive { display: none; background: none; }
+		ul.expanded { display: block;  }
+		ul.expanded li { display: block; border: 1px solid #eee; border-width: 0 0 1px; padding: 5px 16px; }
+		ul.responsive li { background-color: #dcdcdc;  }
+		ul.responsive li.logo, ul.expanded li.logo { display: none; }
 	</style>
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 
 	<script type="text/javascript">
 		function openCloseMenu(el) {
+			var desktopMenuEL = $("ul.desktopMenu");
 			if(el.className == "expanded"){
+				desktopMenuEL[0].classList.remove("expanded");
 				el.classList.remove("expanded");
 			}
 			else{
+				desktopMenuEL[0].classList.add("expanded");
 				el.classList.add("expanded");
 			}
 		}
@@ -48,31 +55,36 @@
 			if(desktopMenuEL[0].scrollWidth > desktopMenuEL.innerWidth() ){
 				//scrolling
 				//desktopMenuEL.hide();
-				//mobileMenuEL.show();//animation wont work with display show hide
-				desktopMenuEL.css("opacity", "0");
-				mobileMenuEL.css({"opacity": "1",
-					"height": "auto"});
+				mobileMenuEL.show();//animation wont work with display show hide
+				//desktopMenuEL.css("opacity", "0");
+
+				desktopMenuEL[0].classList.add("responsive");
+				//mobileMenuEL.css({"opacity": "1","height": "auto"});
 			}
 			else{
 				//no scrolling
-				//mobileMenuEL.hide();
+				mobileMenuEL.hide();
 				//desktopMenuEL.show();
-				mobileMenuEL.css({"opacity": "0", "height": 0});
-				desktopMenuEL.css("opacity", "1");
+				desktopMenuEL[0].classList.remove("responsive");
+				//mobileMenuEL.css({"opacity": "0", "height": 0});
+				//desktopMenuEL.css("opacity", "1");
 			}
 			
 
 			$(window).resize(function(){
 				if(desktopMenuEL[0].scrollWidth > desktopMenuEL.innerWidth() ){
 				//scrolling
-				desktopMenuEL.css("opacity", "0");
-				mobileMenuEL.css({"opacity": "1",
-					"height": "auto"});
+				//desktopMenuEL.css("opacity", "0");
+				desktopMenuEL[0].classList.add("responsive");
+				mobileMenuEL.show();
+				//mobileMenuEL.css({"opacity": "1","height": "auto"});
 				}
 				else{
 					//no scrolling
-					mobileMenuEL.css({"opacity": "0", "height": 0});
-					desktopMenuEL.css("opacity", "1");
+					desktopMenuEL[0].classList.remove("responsive");
+					mobileMenuEL.hide();
+					//mobileMenuEL.css({"opacity": "0", "height": 0});
+					//desktopMenuEL.css("opacity", "1");
 				}
 			});
 

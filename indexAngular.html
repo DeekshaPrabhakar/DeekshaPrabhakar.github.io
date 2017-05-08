@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular UI router test</title>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+	<script type="text/javascript">
+
+		var deeApp = angular.module('deeApp', ['ui.router']);
+
+		deeApp.config(function($stateProvider, $urlRouterProvider) {
+
+			$urlRouterProvider.otherwise('/');
+
+			$stateProvider
+
+        // HOME STATES AND NESTED VIEWS ========================================
+        .state('home', {
+        	url: '/home',
+        	templateUrl: 'indexAngular.html'
+        })
+        .state('articles', {
+        	url: '/articles',
+        	templateUrl: 'articles.html'
+        })
+        
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('poc', {
+            url: '/poc',
+        	templateUrl: 'poc.html'   
+        });
+        
+    });
+
+</script>
+
+</head>
+<body ng-app="deeApp">
+<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" ui-sref="home">Deeksha Prabhakar</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right" >
+					<li><a ui-sref="poc">POC</a></li>
+					<li><a ui-sref="articles">Articles</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div ui-view></div>
+</body>
+</html>
