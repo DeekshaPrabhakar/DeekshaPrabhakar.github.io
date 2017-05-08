@@ -1,0 +1,79 @@
+<html>
+<body>
+  <header>
+    <h1>My Page</h1>
+  </header>
+  <section id="content">
+    <h2>Look at my web page!</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et lobortis turpis. Nam et tellus quis odio vehicula lobortis. In semper augue sem, at vehicula sem convallis a. Donec ac tristique quam. Proin mattis sit amet mi in ultricies. Pellentesque rutrum iaculis odio et tincidunt. Quisque odio augue, egestas quis ex non, fermentum tempor ipsum. Cras efficitur et nunc ac venenatis. Ut vel ultrices lorem, et gravida nibh. Aenean et ornare diam. Pellentesque dapibus nisl dui, a interdum mauris efficitur quis. Mauris sed magna nec sapien venenatis scelerisque consectetur eu erat.</p>
+    <p>Etiam at fringilla turpis. Quisque vel risus nisi. Nunc efficitur erat eu sagittis hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt nunc odio, quis lobortis nunc molestie sed. Vestibulum molestie est iaculis urna pulvinar lobortis. Quisque tempus nibh tincidunt, consequat sem aliquet, cursus felis.</p>
+
+    <aside class="notes">
+      Morbi a mi viverra, fermentum turpis sed, malesuada mauris. Nullam non nisi in massa tristique venenatis. In tristique volutpat erat, a hendrerit nulla tempor malesuada. Aenean a ornare lectus, eget sodales nisi. Ut vehicula, orci in porttitor maximus, odio ligula porta magna, sed tincidunt nibh sem a nisi.
+    </aside>
+  </section>
+
+  <script type="text/javascript">
+
+    function mileStones() {
+         //select the h1, #content and .notes elements in the document provided above
+        var tagElColl = document.getElementsByTagName("h1"); //returns collection with the specific tag
+        var contentEl = document.getElementById("content");// returns element with id or if not present returns null
+        var classElColl = document.getElementsByClassName("notes");//returns collection of elements with that class
+        var headerEl = document.getElementsByTagName("header")[0];
+        var pElColl = document.getElementsByTagName("p");
+        //Manipulating element attributes
+
+        //add an ID to one of the elements that doesn't have one already
+        var elWithoutIDColl = document.body.querySelectorAll(":not([id])");// returns non-live collection
+        var elWithoutID = elWithoutIDColl[0];
+        console.log("Element ID before adding ID: " + elWithoutID.id);
+        elWithoutID.id = "pgHeader";
+        console.log("Element ID after adding ID: " +  elWithoutID.id);
+
+        var classEl = classElColl[0];
+        //adding or editing classes
+        if(classEl.className != ""){
+          classEl.className += " test";
+        }
+        else{
+          classEl.className = "test";
+        }
+
+        //If selected an element that contains one or more children, traverse down to those elements
+        var childNodes = contentEl.children;
+        Array.prototype.forEach.call(childNodes, function(child){
+          console.log(child.tagName + " " + child);
+        });
+        
+
+        //Using the style property, change an element's style
+
+        contentEl.style.margin = "0 auto";
+        contentEl.style.width = "80%";
+
+        headerEl.style.margin = "0 auto";
+        headerEl.style.width = "80%";
+
+        Array.prototype.forEach.call(pElColl, function(paragraph){
+          paragraph.style.fontSize = '1.2em';
+          paragraph.style.lineHeight = "1.5em";
+        });
+        
+        //Creating elements
+        var footerEl = document.createElement('footer');
+        var footerContent = document.createTextNode('@Copyright 2016');
+        footerEl.appendChild(footerContent);
+
+        footerEl.style.margin = "20px auto";
+        footerEl.style.width = "80%";
+        footerEl.style.color = "#aaa";
+
+        document.body.appendChild(footerEl);
+      }
+      mileStones();
+
+    </script>
+  </body>
+  </html>

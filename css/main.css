@@ -1,0 +1,18 @@
+* { margin: 0px ;padding: 0px;}
+
+header, #pgContent { max-width: 80%; margin: 0 auto; }
+header { border-bottom: 2px solid #cc7777; padding: 0 0 6px 0; }
+nav ul { text-align: right; }
+nav ul li { display: inline; padding: 10px; font-size: 1.2em; }
+nav ul li a { color: #6f1328; text-decoration: none; }
+
+#pgHeaderBar img.dp { display: inline-block; width: 80px; height: 80px; border-radius: 120px; margin: 12px 0 0; vertical-align: bottom;}
+#nameDiv { display: inline-block; text-align: left; }
+#nameDiv h1 { font-size: 1.8em; color: #6f1328; text-transform: uppercase;  }
+#nameDiv h2 { color: #cc7777; font-size: 1.5em; font-weight: normal; }
+#nameDiv img.githubLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; height: 24px; width: 24px; }
+#nameDiv img.linkedinLogo { vertical-align: text-bottom; border-radius: 2px; margin-left: 3px; }
+#pgHeaderBar .tagline { text-align: right; color:  #6f1328; font-style: italic; }
+#pgContent { margin-top: 20px; }
+footer { text-align: center; margin: 0 auto; max-width: 50%; border-top: 1px solid #cc7777; }
+footer img { padding: 10px; }
